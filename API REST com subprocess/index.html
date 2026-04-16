@@ -1,0 +1,23 @@
+<form onsubmit="getWords(); return false;">
+  <label>Letters:</label>
+  <input type="text" id="letters">
+  <button type="submit">Buscar</button>
+</form>
+
+<div id="result"></div>
+
+<script>
+function getWords() {
+    let letters = document.getElementById("letters").value;
+
+    fetch("/words?letters=" + letters)
+    .then(res => res.json())
+    .then(data => {
+        let html = "<b>Palavras:</b><br>";
+        data.possibilities.forEach(w => {
+            html += w + "<br>";
+        });
+        document.getElementById("result").innerHTML = html;
+    });
+}
+</script>

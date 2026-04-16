@@ -1,0 +1,7 @@
+wget -qO- http://localhost:5000/payment
+wget -S -qO- http://localhost:5000/payment
+
+for i in {1..5}; do
+  wget -qO- http://localhost:5000/payment
+  echo
+done
