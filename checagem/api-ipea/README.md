@@ -1,7 +1,7 @@
 # API IPEA - Atividade Avaliativa
 
 Curso: Sistemas de Informação
-Disciplina: Integração e Consumo de APIs
+NF4: Integração e Consumo de APIs
 Professor: Me. Luis Vinicius Costa Silva
 Turma: Noturno – 1º Semestre 2026
 
