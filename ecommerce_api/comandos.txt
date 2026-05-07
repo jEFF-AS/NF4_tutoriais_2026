@@ -1,0 +1,165 @@
+Boa — isso aqui vira praticamente o “manual de sobrevivência” da aula 😄
+Vou te dar uma **colinha direta e funcional**, focada no seu projeto.
+
+---
+
+# 🚀 🧾 Colinha — Rodar a API + Testar com curl
+
+---
+
+## ▶️ 1. Subir o projeto
+
+```bash
+# criar ambiente virtual
+python3 -m venv venv
+
+# ativar
+source venv/bin/activate
+
+# instalar dependências
+pip install -r requirements.txt
+
+# rodar a API
+python run.py
+```
+
+API vai rodar em:
+
+```
+http://127.0.0.1:5000
+```
+
+---
+
+## 👤 2. Registrar usuário
+
+```bash
+curl -X POST http://127.0.0.1:5000/register \
+-H "Content-Type: application/json" \
+-d '{
+  "username": "admin",
+  "password": "123"
+}'
+```
+
+---
+
+## 🔐 3. Login (gerar token JWT)
+
+```bash
+curl -X POST http://127.0.0.1:5000/login \
+-H "Content-Type: application/json" \
+-d '{
+  "username": "admin",
+  "password": "123"
+}'
+```
+
+📌 Saída esperada:
+
+```json
+{
+  "access_token": "SEU_TOKEN_AQUI"
+}
+```
+
+---
+
+## 💾 4. Criar item
+
+```bash
+curl -X POST http://127.0.0.1:5000/item/tenis_nike \
+-H "Content-Type: application/json" \
+-d '{
+  "price": 199.99,
+  "sizes": "40,41,42",
+  "item_url": "http://nike.com/tenis",
+  "store_url": "nike"
+}'
+```
+
+---
+
+## 📦 5. Listar itens
+
+```bash
+curl http://127.0.0.1:5000/items
+```
+
+---
+
+## 🔍 6. Buscar item específico
+
+```bash
+curl http://127.0.0.1:5000/item/tenis_nike
+```
+
+---
+
+## 🏬 7. Criar loja
+
+```bash
+curl -X POST http://127.0.0.1:5000/store/nike
+```
+
+---
+
+## 🏬 8. Listar lojas
+
+```bash
+curl http://127.0.0.1:5000/stores
+```
+
+---
+
+## ❌ 9. Deletar item (com token)
+
+```bash
+curl -X DELETE http://127.0.0.1:5000/item/tenis_nike \
+-H "Authorization: Bearer SEU_TOKEN_AQUI"
+```
+
+---
+
+## ❌ 10. Deletar loja (com token)
+
+```bash
+curl -X DELETE http://127.0.0.1:5000/store/nike \
+-H "Authorization: Bearer SEU_TOKEN_AQUI"
+```
+
+---
+
+# ⚡ Dica PRO (facilita muito em aula)
+
+Salvar o token numa variável:
+
+```bash
+TOKEN="SEU_TOKEN_AQUI"
+```
+
+E usar:
+
+```bash
+-H "Authorization: Bearer $TOKEN"
+```
+
+---
+
+# 🧠 Resumo mental (pra prova)
+
+* POST → cria
+* GET → consulta
+* DELETE → remove (precisa JWT)
+* JSON → entrada/saída
+* curl → simula cliente
+
+---
+
+Se quiser, posso te montar uma versão:
+
+* 🖥️ script `.sh` que automatiza tudo
+* 🧪 roteiro de aula prática (passo a passo pros alunos)
+* 💀 versão com erros propositalmente pra debug
+
+Só falar 👍
