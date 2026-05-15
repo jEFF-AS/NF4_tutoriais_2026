@@ -1,7 +1,10 @@
 # Análise da API X
 
 ## API escolhida
-PokéAPI: https://pokeapi.co/docs/v2
+PokéAPI: 
+```bash
+https://pokeapi.co/docs/v2
+```
 
 ## Recursos
 - https://pokeapi.co/api/v2/berry/<berryname>
@@ -9,12 +12,12 @@ PokéAPI: https://pokeapi.co/docs/v2
 - https://pokeapi.co/api/v2/location/{id or name}
 
 ## Métodos HTTP
-- GET
+- GET: É o único método HTTP suportado. Ao tentar usar POST, PUT, ou DELETE, o servidor rejeitará a requisição (geralmente retornando um erro 404 Not Found ou 405 Method Not Allowed), pois não é permitido alterar o banco de dados deles.
 
 ## Estado enviado pelo cliente
-https://pokeapi.co/api/v2/berry/Cheri
-https://pokeapi.co/api/v2/berry-firmness/2/
+Parâmetros na URL (Path Parameters): /berry/Cheri; /berry-firmness/2/; /pokemon/25.
+Query parameters (Paginação): ?limit=20&offset=20
 
 ## Exemplo com curl
 ```bash
-curl https://api.exemplo.com/recurso
+curl -X GET "https://pokeapi.co/api/v2/pokemon?limit=10&offset=0"
