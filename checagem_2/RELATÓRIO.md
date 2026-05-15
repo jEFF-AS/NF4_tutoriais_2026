@@ -21,5 +21,10 @@ Parâmetros na URL (Path Parameters): /berry/Cheri; /berry-firmness/2/; /pokemon
 Query parameters (Paginação): ?limit=10&offset=5 (traz 5 resultados, pulando os 10 primeiros)
 
 ## Exemplo com curl
+Exemplo 1: Buscar dados de um Pokémon específico pelo nome:
+```bash
+curl -X GET https://pokeapi.co/api/v2/pokemon/charizard
+```
+Exemplo 2: Buscar a lista de Pokémon usando paginação (trazendo 10 itens):
 ```bash
 curl -X GET "https://pokeapi.co/api/v2/pokemon?limit=10&offset=0"
