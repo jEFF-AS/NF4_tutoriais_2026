@@ -54,7 +54,7 @@ Explique quais informações o cliente envia para o servidor, por exemplo:
 
 ### 6. Exemplo de uso com `curl`
 
-Inclua pelo menos três exemplos de requisição usando `curl`.
+Inclua pelo menos três exemplos de requisição usando `curl` e suas respostas, assim como cabeçalhos de pacotes http e uma discussão breve.
 
 ---
 
