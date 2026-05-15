@@ -52,33 +52,9 @@ Explique quais informações o cliente envia para o servidor, por exemplo:
 * Cabeçalhos HTTP
 * Tokens de autenticação
 
-### 4. Outras formas de organizar os recursos
-
-Discuta possíveis alternativas para a estrutura da API.
-
-Exemplos:
-
-* Agrupar recursos relacionados
-* Criar sub-recursos
-* Adicionar endpoints de busca
-* Utilizar versionamento
-
-### 5. Escalabilidade horizontal
-
-Explique como a API poderia ser escalada para atender mais usuários.
-
-Exemplos:
-
-* Balanceadores de carga
-* Réplicas de leitura
-* Cache
-* CDN
-* Paginação
-* Filas assíncronas
-
 ### 6. Exemplo de uso com `curl`
 
-Inclua pelo menos um exemplo de requisição usando `curl`.
+Inclua pelo menos três exemplos de requisição usando `curl`.
 
 ---
 
@@ -107,11 +83,11 @@ Descrição dos parâmetros, headers e corpo da requisição.
 curl https://api.exemplo.com/recurso
 ````
 
-## Outras formas de organizar os recursos
+## Outras formas de organizar os recursos (opcional)
 
 Discussão sobre possíveis alternativas.
 
-## Escalabilidade horizontal
+## Escalabilidade horizontal (opcional)
 
 Discussão sobre cache, balanceamento e outras estratégias.
 
@@ -131,21 +107,7 @@ Discussão sobre cache, balanceamento e outras estratégias.
 
 ---
 
-## Critérios de avaliação
 
-| Critério | Pontos |
-|------|------:|
-| Identificação correta dos recursos | 2 |
-| Identificação dos métodos HTTP | 2 |
-| Análise do estado enviado pelo cliente | 2 |
-| Discussão sobre organização dos recursos | 2 |
-| Discussão sobre escalabilidade horizontal | 1 |
-| Exemplo funcional com `curl` | 1 |
-| **Total** | **10** |
-
-
-A nota será ajustada de acordo com o valor absoluto da checagem.
----
 
 ## Dicas
 
