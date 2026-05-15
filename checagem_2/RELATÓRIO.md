@@ -1,19 +1,19 @@
 # Análise da API X
 
 ## API escolhida
-Nome da API e link para a documentação oficial.
+PokéAPI: https://pokeapi.co/docs/v2
 
 ## Recursos
-- Recurso 1
-- Recurso 2
-- Recurso 3
+- https://pokeapi.co/api/v2/berry/<berryname>
+- https://pokeapi.co/api/v2/encounter-method/{id or name}/
+- https://pokeapi.co/api/v2/location/{id or name}
 
 ## Métodos HTTP
 - GET
-- POST
 
 ## Estado enviado pelo cliente
-Descrição dos parâmetros, headers e corpo da requisição.
+https://pokeapi.co/api/v2/berry/Cheri
+https://pokeapi.co/api/v2/berry-firmness/2/
 
 ## Exemplo com curl
 ```bash
