@@ -1,4 +1,4 @@
-# Análise da API X
+# Análise da API PokéAPI
 
 ## API escolhida
 PokéAPI: 
